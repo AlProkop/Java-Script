@@ -1,0 +1,38 @@
+html,
+body {
+    width: 100%;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+#gamecontent {
+    margin-left: 10%;
+    margin-right: 10%;
+    min-width: 200px;
+}
+
+.row {
+    float: left;
+    min-width: 100%;
+    max-width: 100%;
+    border-color: black;
+    border-style: dotted;
+    border-width: 1px;
+}
+
+.card {
+    border-color: cadetblue;
+    border-style: dotted;
+    border-width: 1px;
+    min-height: 100px;
+    min-width: 23.2%;
+    max-width: 23.2%;
+    margin-left: 1%;
+    margin-top: 1%;
+    display: inline-block;
+    background-color: lightseagreen;
+    text-align: center;
+}

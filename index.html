@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <title>Memory Game</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" type="text/css" media="screen" href="styles/main.css" />
+
+
+<script type="text/javascript">
+function date(){
+ var msec=0; //our counter stores mseconds
+ function formatDate(msec){
+ var d = new Date(msec); // convert milliseconds to a date
+ var s = '' +
+ ((d.getHours() < 10)-2 ? '0'+(d.getHours()-2) : (d.getHours())-2) +':'+
+ ((d.getMinutes() < 10) ? '0'+d.getMinutes() : d.getMinutes()) +':'+
+ ((d.getSeconds() < 10) ? '0'+d.getSeconds() : d.getSeconds());
+ return s;
+ }
+ function displayDate(){
+ msec=msec+1000; //every time when setInterval call method displayDate(), msec increases
+ document.getElementById("play-time").innerHTML = formatDate(msec);
+ }
+ setInterval(displayDate, 1000);
+ }
+ date();
+</script>
+</head>
+<body onload="startTime()">
+ <h1>Memory Game!</h1>
+ <div id="gamecontent">
+ <p>Play time: <span id="play-time"> 00:00:00 </span> s</p>
+ </div>
+ <script src="src/index.js"></script>
+</body>
+</html>
